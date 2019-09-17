@@ -1,0 +1,204 @@
+// widescreens
+@include mediaXl {
+}
+
+// Destkops and laptops
+@include mediaLg {
+}
+
+// tablets and small laptops
+@include mediaMd {
+  // =====================
+  // Home Page
+  // =====================
+  main {
+    align-items: center;
+    text-align: center;
+    padding-left: -10px;
+
+    .lg-heading {
+      display: none;
+    }
+
+    .sm-heading {
+      margin-top: 80px;
+      margin-left: 70px;
+      font-weight: 700;
+      width: 250px;
+
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 30px;
+    }
+
+    .sm-text {
+      font-weight: 600;
+      margin-top: -20px;
+      text-align: center;
+      padding-left: -10px;
+      margin-left: 70px;
+    }
+
+    .btn-call {
+      // font-size: 10px;
+      // padding: 30px 0;
+      margin-top: 100x;
+      padding-left: -10px;
+
+      .quote {
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: -40px;
+      }
+
+      .call {
+        font-size: 16px;
+        font-weight: 600;
+        // margin-bottom: 300px;
+        margin-left: -40px;
+      }
+    }
+  }
+
+  // =====================
+  // About Page
+  // =====================
+  .about-info {
+    grid-template-areas:
+      "banner"
+      "bio"
+      "box1"
+      "box2"
+      "box3";
+
+    grid-template-columns: 2fr;
+
+    .banner {
+      height: 50%;
+    }
+  }
+
+  // =====================
+  // Services Page
+  // =====================
+  main#services-info {
+    .text-logo {
+      font-size: 1rem;
+      position: absolute;
+      top: 45%;
+      left: 18%;
+    }
+
+    .quote-services {
+      position: absolute;
+      top: 50%;
+      left: 28%;
+      opacity: 0.9;
+    }
+
+    .photo-services {
+      width: 300px;
+      height: 300px;
+    }
+
+    .services {
+      .item1 {
+        display: grid;
+        grid-template-areas:
+          "cont2"
+          "cont1";
+
+        .container1 {
+          width: 300px;
+          margin: 1rem auto;
+        }
+
+        .container2 {
+          img {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  // ===========
+  // gallery
+  // ===========
+  main#gallery {
+    h3 {
+      width: 100%;
+      margin-left: -2px;
+    }
+  }
+
+  section#gallery {
+    justify-content: center;
+    align-content: center;
+    // overflow: hidden;
+    margin-right: 10px;
+
+    .item11 {
+      display: grid;
+      grid-template-areas:
+        "cont22"
+        "cont11";
+
+      grid-template-columns: repeat(1, 1fr);
+
+      .container11 {
+        grid-area: cont11;
+      }
+
+      .container22 {
+        grid-area: cont22;
+        margin-top: 5vh;
+        // width: 10px;
+
+        .hide-on-small {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // =========
+  // contact
+  // =======
+
+  main#contact {
+    justify-content: center;
+    align-content: center;
+
+    display: grid;
+    grid-gap: 10px;
+
+    grid-template-areas:
+      "containerr1"
+      "containerr2";
+
+    grid-template-columns: 1fr;
+
+    .containerr1 {
+      grid-area: containerr1;
+    }
+
+    .containerr2 {
+      grid-area: containerr2;
+      width: 100%;
+
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  main#about {
+    h1 {
+      margin-top: 10vh;
+    }
+  }
+}
